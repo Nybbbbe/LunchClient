@@ -1,6 +1,7 @@
 import PublicNavbar from './PublicNavbar';
 import PublicMessage from './PublicMessage';
 import PublicHours from './PublicHours';
+import PublicMenu from './PublicMenu';
 import './PublicApp.scss';
 
 const PublicApp = () => {
@@ -11,6 +12,7 @@ const PublicApp = () => {
                 <h1>Public</h1>
                 < PublicMessage/>
                 < PublicHours/>
+                < PublicMenu/>
             </div>
         </div>
     );

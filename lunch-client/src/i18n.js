@@ -7,19 +7,28 @@ const resources = {
   eng: {
     translation: {
       "Announcements": "Announcements",
-      "OpenHours": "Open Hours"
+      "OpenHours": "Open Hours",
+      "today": "Today",
+      "week": "Week",
+      "menu": "Menu"
     }
   },
   swe: {
     translation: {
       "Announcements": "Upplysningar",
-      "OpenHours": "Öppentider"
+      "OpenHours": "Öppentider",
+      "today": "Idag",
+      "week": "Vecka",
+      "menu": "Meny"
     }
   },
   fin: {
     translation: {
       "Announcements": "Ilmoitukset",
-      "OpenHours": "Aukioloajat"
+      "OpenHours": "Aukioloajat",
+      "today": "Tänään",
+      "week": "Viikko",
+      "menu": "Ruokalista"
     }
   }
 };
