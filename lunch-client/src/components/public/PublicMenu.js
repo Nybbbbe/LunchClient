@@ -30,10 +30,14 @@ const PublicMenu = () => {
 
     return (
         <>
-            <h1>{t('menu')}</h1>
+            <h1>{t('menu') + ":"}</h1>
             { MenuType === "today/" ?
                 <pre>{Menu}</pre>
-            : parse(Menu)}
+            :
+            <div className="menu-week">
+                {parse(Menu)}
+            </div> 
+            }
             <div className="menu-button-container">
                 <Button
                     variant="contained"

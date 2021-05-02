@@ -27,7 +27,7 @@ const PublicLanguageDropdown = () => {
 
   const setLanguage = (event, lang) => {
     i18n.changeLanguage(lang);
-    setCurrLang(lang)
+    setCurrLang(lang);
     if (anchorRef.current && anchorRef.current.contains(event.target)) {
         return;
       }

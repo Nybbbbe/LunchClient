@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
-import RequestService from '../../scripts/RequestService';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import i18n from '../../i18n';
+import Button from '@material-ui/core/Button';
+import RequestService from '../../scripts/RequestService';
 
-const PublicMessage = () => {
+const AdminMessages = () => {
     const { t, i18n } = useTranslation();
     const [Message, setMessage] = useState("");
     const [currLang, setCurrLang] = useState(i18n.language);
@@ -19,14 +19,25 @@ const PublicMessage = () => {
         });
     }, [i18n, currLang]);
 
+    const toggleEditDialog = () => {
+
+    }
+
     return (
-        Message !== ""?
+        <>
+        <h1>{t('Announcements') + ":"}</h1>
+        {Message !== ""?
             <>
-            <h1>{t('Announcements') + ":"}</h1>
             <h3>{Message}</h3>
             </>
-        : null 
+        : null}
+        <Button
+            variant="contained"
+            color={"primary"}
+            onClick={() => toggleEditDialog()}
+            >{t('edit')}</Button>
+        </>
     )
 }
 
-export default PublicMessage;
+export default AdminMessages;

@@ -10,7 +10,12 @@ const resources = {
       "OpenHours": "Open Hours",
       "today": "Today",
       "week": "Week",
-      "menu": "Menu"
+      "menu": "Menu",
+      "posts": "Posts",
+      "prices": "Prices",
+      "description": "Name",
+      "studentprice": "Student Price",
+      "normalprice": "Normal Price"
     }
   },
   swe: {
@@ -19,7 +24,12 @@ const resources = {
       "OpenHours": "Öppentider",
       "today": "Idag",
       "week": "Vecka",
-      "menu": "Meny"
+      "menu": "Meny",
+      "posts": "Artiklar",
+      "prices": "Priser",
+      "description": "Samn",
+      "studentprice": "Studerande Pris",
+      "normalprice": "Normal Pris"
     }
   },
   fin: {
@@ -28,7 +38,12 @@ const resources = {
       "OpenHours": "Aukioloajat",
       "today": "Tänään",
       "week": "Viikko",
-      "menu": "Ruokalista"
+      "menu": "Ruokalista",
+      "posts": "Artikkelit",
+      "prices": "Hinnasto",
+      "description": "Nimi",
+      "studentprice": "Opiskelija Hinta",
+      "normalprice": "Normaali Hinta"
     }
   }
 };

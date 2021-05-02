@@ -60,11 +60,17 @@ a {
 }
 
 .public-container {
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.public-content {
     background-color: #ffffff;
+    margin: 0 auto;
     width: 100vw;
     max-width: 800px;
     padding: 1rem;
-    overflow: auto;
 }
 
 .language-dropdown {
@@ -81,4 +87,13 @@ a {
 
 .public-container .menu-button-container > * {
     margin: 1rem 1rem 1rem 0;
+}
+
+pre {
+    font-family: inherit;
+    white-space: break-spaces;
+}
+
+.menu-week p {
+    font-weight: bold;
 }
