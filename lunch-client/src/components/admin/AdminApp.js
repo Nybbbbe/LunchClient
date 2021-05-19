@@ -3,6 +3,8 @@ import AdminLogin from './AdminLogin';
 import AdminLanguageSelector from './AdminLanguageSelector';
 import AdminMessage from './AdminMessage';
 import AdminOpeningHours from './AdminOpeningHours';
+import AdminPosts from './AdminPosts';
+import AdminPrices from './AdminPrices';
 import RequestService from '../../scripts/RequestService';
 
 import './AdminApp.scss';
@@ -25,6 +27,8 @@ const AdminApp = () => {
                 < AdminLanguageSelector/>
                 < AdminMessage/>
                 < AdminOpeningHours/>
+                < AdminPosts/>
+                < AdminPrices/>
             </div>
         </div>
         :

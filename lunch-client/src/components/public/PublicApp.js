@@ -12,7 +12,6 @@ const PublicApp = () => {
             <PublicNavbar />
             <div className="public-container">
                 <div className="public-content">
-                    <h1>Public</h1>
                     < PublicMessage/>
                     < PublicHours/>
                     < PublicMenu/>

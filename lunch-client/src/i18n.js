@@ -27,7 +27,7 @@ const resources = {
       "menu": "Meny",
       "posts": "Artiklar",
       "prices": "Priser",
-      "description": "Samn",
+      "description": "Namn",
       "studentprice": "Studerande Pris",
       "normalprice": "Normal Pris"
     }

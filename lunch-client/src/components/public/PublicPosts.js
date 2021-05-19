@@ -20,7 +20,8 @@ const PublicPosts = () => {
     useEffect(() => {
         RequestService.getDataRequest("posts/" + currLang).then(postList => {
             console.log(postList);
-            setPosts(postList);
+            const tmp = postList.reverse();
+            setPosts(tmp);
         });
 
         i18n.on('languageChanged', () => {

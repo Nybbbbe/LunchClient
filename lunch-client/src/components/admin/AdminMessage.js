@@ -55,7 +55,7 @@ const AdminMessages = () => {
 
     return (
         <>
-        <h1>{t('Announcements') + ":"}</h1>
+        <h1>{"Announcements" + ":"}</h1>
         {Message !== ""?
             <>
             <h3>{Message}</h3>

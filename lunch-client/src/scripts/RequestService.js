@@ -62,6 +62,12 @@ class RequestService {
         });
     }
 
+    static putRequest(endPoint, obj) {
+        return axios.put(url + endPoint, {
+            obj
+        });
+    }
+
     static getDataRequest(endPoint) {
         return new Promise ((resolve,reject) => {
             axios.get(url + endPoint).then((res) => {
@@ -76,11 +82,16 @@ class RequestService {
     }
 
     static sendDataRequest(endPoint, json) {
+        const token = localStorage.getItem('token');
         return axios({
             method: 'post',
             url: url + endPoint,
             data: json,
-            headers: {'Content-Type': 'multipart/form-data' }
+            headers: {
+                'Bearer': `${token}`,
+                'Content-Type': 'multipart/form-data',
+
+            }
         });
         // .then(function (response) {
         //     // handle success

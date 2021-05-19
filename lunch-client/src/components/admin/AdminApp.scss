@@ -23,3 +23,19 @@
 .admin-container .menu-button-container > * {
     margin: 1rem 1rem 1rem 0;
 }
+
+.MuiListItem-container {
+    background-color: #e0e0e0;
+}
+
+.MuiListItemText-root .MuiTypography-body1 {
+    font-weight: bold;
+}
+
+.file-upload {
+    margin-top: 2rem;
+}
+
+.MuiButtonBase-root.table-add-button {
+    margin-top: 0.5rem;
+}
