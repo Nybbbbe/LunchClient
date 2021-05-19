@@ -9,20 +9,20 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 
-const AdminMessages = () => {
+const AdminOpeningHours = () => {
     const { t, i18n } = useTranslation();
-    const [MsgObj, setMsgObj] = useState({});
-    const [Message, setMessage] = useState("");
-    const [MessageEdit, setMessageEdit] = useState("");
+    const [HourObj, setHourObj] = useState({});
+    const [Hours, setHours] = useState("");
+    const [HoursEdit, setHoursEdit] = useState("");
     const [currLang, setCurrLang] = useState(i18n.language);
     const [open, setOpen] = useState(false);
     
     useEffect(() => {
-        RequestService.getDataRequest("messages/" + currLang).then(msgObj => {
-            console.log(msgObj);
-            setMessage(msgObj.message);
-            setMessageEdit(msgObj.message);
-            setMsgObj(msgObj);
+        RequestService.getDataRequest("hours/" + currLang).then(hourObj => {
+            console.log(hourObj);
+            setHours(hourObj.hours);
+            setHoursEdit(hourObj.hours);
+            setHourObj(hourObj);
         });
 
         i18n.on('languageChanged', () => {
@@ -31,7 +31,7 @@ const AdminMessages = () => {
     }, [i18n, currLang]);
 
     const onMessageChange = (e) => {
-        setMessageEdit(e.target.value)
+        setHoursEdit(e.target.value)
     }
 
     const handleClickOpen = () => {
@@ -44,21 +44,21 @@ const AdminMessages = () => {
 
     const handleSave = () => {
         setOpen(false);
-        const tmpObj = MsgObj;
-        tmpObj.message = MessageEdit;
+        const tmpObj = HourObj;
+        tmpObj.hours = HoursEdit;
         console.log(tmpObj);
-        RequestService.sendRequest("messages/" + currLang, tmpObj).then(() => {
-            console.log("Message saved");
+        RequestService.sendRequest("hours/" + currLang, tmpObj).then(() => {
+            console.log("Hours saved");
         })
-        setMessage(MessageEdit);
+        setHours(HoursEdit);
     }
 
     return (
         <>
-        <h1>{t('Announcements') + ":"}</h1>
-        {Message !== ""?
+        <h1>{t('Opening Hours') + ":"}</h1>
+        {Hours !== ""?
             <>
-            <h3>{Message}</h3>
+            <pre>{Hours}</pre>
             </>
         : null}
         <Button
@@ -74,7 +74,7 @@ const AdminMessages = () => {
             maxWidth='sm'
             fullWidth={true}
         >
-            <DialogTitle id="form-dialog-title">Edit Announcements</DialogTitle>
+            <DialogTitle id="form-dialog-title">Edit Hours</DialogTitle>
             <DialogContent>
             <TextField
                 autoFocus
@@ -83,7 +83,7 @@ const AdminMessages = () => {
                 fullWidth
                 multiline
                 rows={4}
-                value={MessageEdit}
+                value={HoursEdit}
                 onChange={(e) => onMessageChange(e)}
             />
             </DialogContent>
@@ -100,4 +100,4 @@ const AdminMessages = () => {
     )
 }
 
-export default AdminMessages;
+export default AdminOpeningHours;

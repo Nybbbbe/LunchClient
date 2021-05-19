@@ -2,6 +2,7 @@ import { useState } from "react";
 import AdminLogin from './AdminLogin';
 import AdminLanguageSelector from './AdminLanguageSelector';
 import AdminMessage from './AdminMessage';
+import AdminOpeningHours from './AdminOpeningHours';
 import RequestService from '../../scripts/RequestService';
 
 import './AdminApp.scss';
@@ -23,6 +24,7 @@ const AdminApp = () => {
                 <h1>Admin</h1>
                 < AdminLanguageSelector/>
                 < AdminMessage/>
+                < AdminOpeningHours/>
             </div>
         </div>
         :

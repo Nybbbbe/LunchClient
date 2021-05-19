@@ -56,9 +56,9 @@ class RequestService {
         });
     }
 
-    static sendRequest(endPoint, text) {
+    static sendRequest(endPoint, obj) {
         return axios.post(url + endPoint, {
-            text
+            obj
         });
     }
 
